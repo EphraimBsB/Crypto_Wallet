@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1010871830943",
+    "project_id": "crypto-wallet-6b398",
+    "storage_bucket": "crypto-wallet-6b398.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010871830943:android:7fb4a6921a267b134715aa",
+        "android_client_info": {
+          "package_name": "com.example.cryto_wallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010871830943-mmdhr321jidvm6ii7fjftiv7pa7lh5nf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlmOcASxTcVFst9ViRa-f5IFmBJa5NtYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010871830943-mmdhr321jidvm6ii7fjftiv7pa7lh5nf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1010871830943-7hqqn16gfunulvfeum0d08lgbmd4ovn3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.crytoWallet"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
