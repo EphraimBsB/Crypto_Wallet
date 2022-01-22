@@ -27,6 +27,9 @@ class _AuthenticationState extends State<Authentication> {
           children: [
             TextFormField(
               controller: emailField,
+              style: const TextStyle(
+                color: Colors.white
+              ),
               decoration: const InputDecoration(
                 labelText: 'Email',
                 labelStyle: TextStyle(
@@ -40,6 +43,9 @@ class _AuthenticationState extends State<Authentication> {
             ),
             TextFormField(
               controller: passwordField,
+              style: const TextStyle(
+                color: Colors.white
+              ),
               obscureText: true,
               decoration: const InputDecoration(
                 labelText: 'Password',
