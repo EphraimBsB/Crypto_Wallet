@@ -11,7 +11,7 @@ class AddView extends StatefulWidget {
 class _AddViewState extends State<AddView> {
   List<String> coins = [
     "Bitcoin",
-    "Dodgecoin",
+    "Tether",
     "Ethereum"
   ];
   String dropDownValue = "Bitcoin";
