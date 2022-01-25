@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cryto_wallet/net/api_methodes.dart';
+import 'package:cryto_wallet/net/flutter_fire.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -55,16 +56,36 @@ class _HomeViewState extends State<HomeView> {
 
             return ListView(
               children: snapshot.data!.docs.map((document){
-                return SizedBox(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text("Coin Name: ${document.id}"),
-                      Text("Amount Owned: ${getValue(document.id,(document.data()as Map<String, dynamic>)['Amount']).toString()}",
-                      overflow: TextOverflow.visible,
-                      maxLines: 5,
-                      )
-                    ]
+                return Padding(
+                  padding: const EdgeInsets.only(top: 5.0, left: 15.0, right: 15.0),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width/1.3,
+                    height: MediaQuery.of(context).size.height/12,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadiusDirectional.circular(15.0),
+                      color: Colors.blue
+                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const SizedBox(width: 5.0,),
+                        Text("Coin : ${document.id}",
+                        style: const TextStyle(color: Colors.white, fontSize: 18.0),
+                        ),
+                        Text("${getValue(document.id,(document.data()as Map<String, dynamic>)['Amount']).toStringAsFixed(2)} USD",
+                        style: const TextStyle(color: Colors.white, fontSize: 18.0),
+                        ),
+                        IconButton(
+                          onPressed: () async {
+                            await removeCoin(document.id);
+                          }, 
+                          icon: const Icon(
+                            Icons.close,
+                            color: Colors.red,
+                          )
+                        )
+                      ]
+                    ),
                   ),
                 );
               }).toList(),

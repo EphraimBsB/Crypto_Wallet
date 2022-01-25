@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Crypto Wallet',
+      debugShowCheckedModeBanner: false,
+      title: 'Ephra Crypto Wallet',
       home: Authentication(),
     );
   }
